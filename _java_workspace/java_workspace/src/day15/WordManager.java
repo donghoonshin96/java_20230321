@@ -1,0 +1,99 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import product.Order;
+import product.Product;
+
+public class WordManager {
+	Scanner scan = new Scanner(System.in);
+	private ArrayList<Word> word = new ArrayList<>();
+	private ArrayList<Word> mean = new ArrayList<>();
+
+	public void add(Scanner scan) {
+		System.out.println("추가할 단어를 입력하세요.");
+		String word = scan.next();
+		System.out.println("단어의 뜻을 입력하세요.");
+		String mean = scan.next();
+		Word w = new Word(word, mean);
+		this.word.add(w);
+
+	}
+
+	public void printWord() {
+		
+		int index = 1;
+		for (int i = 0; i < word.size(); i++) {
+			System.out.println(word.get(i));
+			index++;
+		}
+		System.out.println("--------");
+
+	}
+
+	public void searchWord(Scanner scan) {
+		System.out.println("검색할 단어를 입력하세요.");
+		String wordSearch = scan.next();
+		for (int i = 0; i < word.size(); i++) {
+			if (word.get(i).getWord().equals(wordSearch)) {
+				System.out.println(word.get(i).getMean());
+				break;
+			}
+		}
+	}
+
+	public void updateWord() {
+
+		System.out.println("수정할 단어를 입력해주세요.");
+		String updateword = scan.next();
+		int index = -1;
+		for (int i = 0; i < word.size(); i++) {
+			if (word.get(i).getWord().equals(updateword)) {
+
+				System.out.println("수정할 단어의 뜻을 입력해주세요.");
+				String updatemean = scan.next();
+
+				word.get(i).setMean(updatemean);
+				System.out.println("수정완료!!");
+				return;
+			}
+		}
+		if (index == 1) {
+
+			System.out.println("단어를 찾을수 없습니다.");
+		}
+
+	}
+
+	public void deleteWord() {
+		System.out.println("삭제할 단어를 입력해주세요.");
+		String deleteword = scan.next();
+		int index = -1;
+
+		for (int i = 0; i < word.size(); i++) {
+			if (word.get(i).getWord().equals(deleteword)) {
+				index = i;
+				word.remove(i);
+
+				System.out.println("삭제 완료!!");
+				return;
+			}
+		}
+		if (index == 1) {
+			System.out.println("찾는 단어가 없습니다.");
+		}
+	}
+
+	public void printMenu() {
+		System.out.println("--WordList--");
+		System.out.println("1.단어추가");
+		System.out.println("2.단어출력");
+		System.out.println("3.단어검색");
+		System.out.println("4.단어수정");
+		System.out.println("5.단어삭제");
+		System.out.println("6.종료");
+
+	}
+
+}

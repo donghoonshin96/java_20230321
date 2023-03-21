@@ -1,0 +1,25 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class StreamEx03 {
+
+	public static void main(String[] args) {
+		List<Student>std = new ArrayList<>();
+		std.add(new Student("홍길동", 90));
+		std.add(new Student("강감찬", 87));
+		std.add(new Student("홍길순", 76));
+		std.add(new Student("강길동", 46));
+		std.add(new Student("강길순", 67));
+		
+		//class에 toString 존재하면...
+		Stream<Student> stream = std.stream();
+		std.stream().forEach(System.out::println);
+        
+	}
+
+}
+
+

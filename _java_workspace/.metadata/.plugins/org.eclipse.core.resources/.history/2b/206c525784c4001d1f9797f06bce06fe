@@ -1,0 +1,29 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class StreamEx {
+
+	public static void main(String[] args) {
+		/* 문자열(이름)을 담는 리스트 생성후, 스트림으로 생성
+		 * 정렬(sorted)하여 출력(forEach)
+		 * */
+		
+		ArrayList<String>list = new ArrayList<>();
+		list.add("전재준");
+		list.add("박연진");
+		list.add("손명오");
+		list.add("최혜정");
+		list.add("이사라");
+		
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		
+		
+		
+		
+	}
+
+}

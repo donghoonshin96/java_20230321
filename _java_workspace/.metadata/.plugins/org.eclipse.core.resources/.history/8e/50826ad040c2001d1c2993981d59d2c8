@@ -1,0 +1,69 @@
+package studentmanager;
+
+public class Student {
+    private String id;
+    private String name;
+    private String rrn;
+    private String college;
+	private String department;
+	private Subject[]subjects;
+	private int count;
+	
+	
+	public Student(String id, String name, String rrn, String college, String department) {
+		this.id = id;
+		this.name = name;
+		this.rrn = rrn;
+		this.college = college;
+		this.department = department;
+		this.subjects = new Subject[5];
+		this.count = 0;
+	}
+	
+	
+	public String getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getRrn() {
+		return rrn;
+	}
+	
+	public String getCollege() {
+		return college;
+	}
+	
+	public String getDepartment() {
+		return department;
+	}
+	
+	public Subject[] getSubjects(){
+		return subjects;
+	}
+	
+	public int getCount() {
+		return count;
+	}
+	
+	
+	
+	public void addSubject(Subject subject) {
+		if(count < subjects.length) {
+			subjects[count] = subject;
+			count++;
+		}else {
+			Subject[]temp = new Subject[subjects.length + 5];
+			for(int i=0; i<subjects.length; i++) {
+				temp[i] = subjects[i];
+			}
+		    temp[count] = subject;
+		    count++;
+		}
+		
+	}
+	
+}

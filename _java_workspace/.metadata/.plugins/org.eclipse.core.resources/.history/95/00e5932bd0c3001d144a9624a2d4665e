@@ -1,0 +1,47 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class WordManager {
+	Scanner scan = new Scanner(System.in);
+	private ArrayList<Word<String, String>> word = new ArrayList<>();
+	private ArrayList<Word<String, String>> mean = new ArrayList<Word<String, String>>();
+
+	public void add(Scanner scan) {
+		System.out.println("추가할 단어를 입력하세요.");
+		String word = scan.next();
+		System.out.println("단어의 뜻을 입력하세요.");
+		String mean = scan.next();
+		Word w = new Word(word, mean);
+
+	}
+
+	public void printWord() {
+
+	}
+
+	public void searchWord() {
+
+	}
+
+	public void updateWord() {
+
+	}
+
+	public void deleteWord() {
+
+	}
+
+	public void printMenu() {
+		System.out.println("--WordList--");
+		System.out.println("1.단어추가");
+		System.out.println("2.단어출력");
+		System.out.println("3.단어검색");
+		System.out.println("4.단어수정");
+		System.out.println("5.단어삭제");
+		System.out.println("6.종료");
+
+	}
+
+}

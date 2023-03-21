@@ -1,0 +1,9 @@
+package product;
+
+public class ProductInterface2 {
+
+	void add();
+	void printProduct();
+	void orderPick(String name, String count);
+	void printOrder();
+}

@@ -1,0 +1,30 @@
+package day15;
+
+import java.util.Scanner;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		WordManager wm = new WordManager();
+		Scanner scan = new Scanner(System.in);
+        int menu = -1;
+        
+        do {
+        	wm.printMenu();
+        	menu = scan.nextInt();
+        	
+        	switch(menu) {
+        	case 1:wm.add(scan); break;
+        	case 2:wm.printWord(); break;
+        	case 3:wm.searchWord(); break;
+        	case 4:wm.updateWord(); break;
+        	case 5:wm.deleteWord(); break;
+        	case 6: break;
+        	default:
+        		System.out.println("메뉴 오류");
+        	}
+        }while(menu!=6);
+        System.out.println("종료~!!");
+	}
+
+}

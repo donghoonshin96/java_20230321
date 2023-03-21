@@ -1,0 +1,63 @@
+package studentmanager;
+
+public class Subject {
+    /*과목클래스 : 한 과목의 정보를 나타내는 클래스
+       -과목코드, 과목명, 학점, 시수, 교수명, 학기, 분류(전공,교양), 수업시간표
+     * */
+	private String code;
+	private String name;
+	private int credit;
+	private int hours;
+	private String professor;
+	private int semester;
+	private String classification;
+	private String timetable;
+	
+	
+	public Subject(String code, String name, int credit, int hours, 
+			String professor, int semester, String classification, String timetable) {
+		this.code = code;
+		this.name = name;
+		this.credit = credit;
+		this.hours = hours;
+		this.professor = professor;
+		this.semester = semester;
+		this.classification = classification;
+		this.timetable = timetable;
+	}
+	
+	public String getCode() {
+		return code;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public int getCredit() {
+		return credit;
+	}
+	
+	public int getHours() {
+		return hours;
+	}
+	
+	public String getProfessor() {
+		return professor;
+	}
+	
+	public int getSemester() {
+		return semester;
+	}
+	
+	public String getClassification() {
+		return classification;
+	}
+	
+	public String getTimetable() {
+		return timetable;
+	}
+	
+	
+	
+}

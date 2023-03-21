@@ -1,0 +1,21 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomerInfo {
+
+	public static void main(String[] args) {
+		List<Customer> cst = new ArrayList<>();
+		cst.add(new Customer("이순신",40,100));
+		cst.add(new Customer("신사임당",35,100));
+		cst.add(new Customer("이아들",10,50));
+
+		int sum = cst.stream().mapToInt(n -> n.getCost()).sum();
+		System.out.println(sum);
+		
+		
+		
+	}
+
+}
